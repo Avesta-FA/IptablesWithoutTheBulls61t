@@ -16,7 +16,7 @@ iptables -P FORWARD DROP
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A OUTPUT -o lo -j ACCEPT
 
-#By default we wont allow new inbound connections, only already established connections 
+#By default we won't allow new inbound connections, only already established connections 
 iptables -A INPUT -p tcp -m state --state ESTABLISHED -j ACCEPT
 iptables -A INPUT -p udp -m state --state ESTABLISHED -j ACCEPT
 iptables -A INPUT -p icmp -m state --state ESTABLISHED -j ACCEPT
